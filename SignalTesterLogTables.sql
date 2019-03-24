@@ -1,4 +1,4 @@
-DROP DATABASE SignalTesterLog;
+-- DROP DATABASE SignalTesterLog;
 
 
 -- create database
