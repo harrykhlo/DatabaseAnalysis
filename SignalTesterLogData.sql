@@ -22,7 +22,7 @@ SELECT * FROM Threshold;
 -- insert Test Table
 -- for logfile 1.txt
 INSERT INTO Test VALUES 
-(1, 'Eevee', 'Blade', 'Denied', 'NotTested', 'Pass', 'NotTested', 'NotTested', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 61.13, NULL, NULL, 1, 'True', NULL, 'False', NULL, NULL, 'Denied', NULL, 'Telstra Mobile', NULL, NULL, NULL, NULL, 'kCLLocationAccuracyKilometer', 'iPad6,12', '89314404000248157530', '89610180002243817774', NULL, 'SDS-196B', 'GAT-17R3', '2.2.5', 3.92, 'EWM400', 'Registeration Denied', NULL, 'Registered, home network', NULL, NULL);
+(1, 'Eevee', 'Blade', 'Unregistered', 'NotTested', 'Pass', 'NotTested', 'NotTested', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 61.13, NULL, NULL, 1, 'True', NULL, 'False', NULL, NULL, 'Unregistered', NULL, 'Telstra Mobile', NULL, NULL, NULL, NULL, 'kCLLocationAccuracyKilometer', 'iPad6,12', '89314404000248157530', '89610180002243817774', NULL, 'SDS-196B', 'GAT-17R3', '2.2.5', 3.92, 'EWM400', 'Registeration Denied', NULL, 'Registered, home network', NULL, NULL);
 
 -- for logfile 2.txt
 INSERT INTO Test VALUES
@@ -30,7 +30,7 @@ INSERT INTO Test VALUES
 
 -- for logfile 3.txt
 INSERT INTO Test VALUES
-(3, 'Celebi', 'Blade', 'Denied', 'NotTested', 'Pass', 'NotTested', 'NotTested', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 27.2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'True', NULL, 'False', NULL, NULL, 'Denied', NULL, 'Telstra Mobile', NULL, NULL, 139.34259429587, -35.6776790181507, 'kCLLocationAccuracyKilometer', 'iPad Air', '89314404000266650267', '89610180002249046930', NULL, 'SDS-061C', 'GAT-17R3', '2.2.5', 3.88, 'EWM400', 'Not Registered, searching for network', NULL, 'Registered, home network', NULL, NULL);
+(3, 'Celebi', 'Blade', 'Unregistered', 'NotTested', 'Pass', 'NotTested', 'NotTested', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 27.2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'True', NULL, 'False', NULL, NULL, 'Unregistered', NULL, 'Telstra Mobile', NULL, NULL, 139.34259429587, -35.6776790181507, 'kCLLocationAccuracyKilometer', 'iPad Air', '89314404000266650267', '89610180002249046930', NULL, 'SDS-061C', 'GAT-17R3', '2.2.5', 3.88, 'EWM400', 'Not Registered, searching for network', NULL, 'Registered, home network', NULL, NULL);
 
 -- for logfile 4.txt
 INSERT INTO Test VALUES
@@ -42,9 +42,9 @@ INSERT INTO Test VALUES
 
 -- for logfile 6.txt
 INSERT INTO Test VALUES
-(6, 'Mewtwo', 'Blade', 'Denied', 'NotTested', 'Pass', 'NotTested', 'NotTested', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 46.07, NULL, NULL, 1, 'True', NULL, 'False', NULL, NULL, 'Denied', NULL, 'Telstra Mobile', NULL, NULL, 152.971914761231, -27.0792295037818, 'kCLLocationAccuracyKilometer', 'iPad Air', '89314404000281178914', '89610180002249045296', NULL, 'SDS-026C', 'GAT-17R3', '2.2.5', 3.88, 'EWM400', 'Registeration Denied', NULL, 'Registered, home network', NULL, NULL);
-
+(6, 'Mewtwo', 'Blade', 'Unregistered', 'NotTested', 'Pass', 'NotTested', 'NotTested', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 46.07, NULL, NULL, 1, 'True', NULL, 'False', NULL, NULL, 'Unregistered', NULL, 'Telstra Mobile', NULL, NULL, 152.971914761231, -27.0792295037818, 'kCLLocationAccuracyKilometer', 'iPad Air', '89314404000281178914', '89610180002249045296', NULL, 'SDS-026C', 'GAT-17R3', '2.2.5', 3.88, 'EWM400', 'Registeration Denied', NULL, 'Registered, home network', NULL, NULL);
 SELECT * FROM Test;
+-- DELETE FROM Test where testId = 1 OR testId =2;
 
 -- for logfile 1.txt
 INSERT INTO BluetoothSignal VALUES

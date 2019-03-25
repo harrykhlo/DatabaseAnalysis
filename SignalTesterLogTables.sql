@@ -1,6 +1,5 @@
 -- DROP DATABASE SignalTesterLog;
 
-
 -- create database
 CREATE DATABASE SignalTesterLog;
 -- use database
@@ -30,11 +29,11 @@ CREATE TABLE IF NOT EXISTS Test(
 	testId INT NOT NULL PRIMARY KEY,
     userName VARCHAR(10),
 	antennaTestType ENUM('Blade', 'Whip', 'Blade&Whip'),
-	signalResultVodafoneBlade ENUM('Fail', 'Pass', 'NotTested', 'Denied'),
-	signalResultVodafoneWhip ENUM('Fail', 'Pass', 'NotTested', 'Denied'),
-	signalResultTelstraBlade ENUM('Fail', 'Pass', 'NotTested', 'Denied'),
-	signalResultTelstraWhip ENUM('Fail', 'Pass', 'NotTested', 'Denied'),
-	signalResultExternalModem ENUM('Fail', 'Pass', 'NotTested', 'Denied'),
+	signalResultVodafoneBlade ENUM('Fail', 'Pass', 'NotTested', 'Unregistered'),
+	signalResultVodafoneWhip ENUM('Fail', 'Pass', 'NotTested', 'Unregistered'),
+	signalResultTelstraBlade ENUM('Fail', 'Pass', 'NotTested', 'Unregistered'),
+	signalResultTelstraWhip ENUM('Fail', 'Pass', 'NotTested', 'Unregistered'),
+	signalResultExternalModem ENUM('Fail', 'Pass', 'NotTested', 'Unregistered'),
 	rssiVodafoneBlade DECIMAL(5,2),
 	rssiVodafoneWhip DECIMAL(5,2),
 	rssiTelstraBlade DECIMAL(5,2),
@@ -88,6 +87,7 @@ CREATE TABLE IF NOT EXISTS BluetoothSignal(
     testId INT NOT NULL,
     FOREIGN KEY (testId) REFERENCES Test (testId)
 )ENGINE = INNODB;
+-- DROP TABLE BluetoothSignal
 
 CREATE TABLE IF NOT EXISTS Job(
 	workOrder VARCHAR(11) NOT NULL,
@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS Job(
     UNIQUE KEY (testId),
     FOREIGN KEY (testId) REFERENCES Test (testId)
 )ENGINE = INNODB;
-DROP TABLE Job;
+-- DROP TABLE Job;
 
 CREATE TABLE IF NOT EXISTS RawData(
 	rawDataId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -110,4 +110,4 @@ CREATE TABLE IF NOT EXISTS RawData(
 	testId INT NOT NULL,
     FOREIGN KEY (testId) REFERENCES Test (testId)
 )ENGINE = INNODB;
-DROP TABLE RawData;
+-- DROP TABLE RawData;
