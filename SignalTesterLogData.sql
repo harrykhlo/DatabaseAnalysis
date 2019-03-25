@@ -1,3 +1,8 @@
+-- BCPR203 - Database Management Systems
+-- Assignment One: Signal Tester Log Database Analysis
+-- Student: Harry Lo
+-- File Name: SignalTesterLogData.sql
+
 -- Insert Rf table
 -- for all logfiles
 INSERT INTO Rf VALUES 
@@ -44,7 +49,8 @@ INSERT INTO Test VALUES
 INSERT INTO Test VALUES
 (6, 'Mewtwo', 'Blade', 'Unregistered', 'NotTested', 'Pass', 'NotTested', 'NotTested', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 46.07, NULL, NULL, 1, 'True', NULL, 'False', NULL, NULL, 'Unregistered', NULL, 'Telstra Mobile', NULL, NULL, 152.971914761231, -27.0792295037818, 'kCLLocationAccuracyKilometer', 'iPad Air', '89314404000281178914', '89610180002249045296', NULL, 'SDS-026C', 'GAT-17R3', '2.2.5', 3.88, 'EWM400', 'Registeration Denied', NULL, 'Registered, home network', NULL, NULL);
 SELECT * FROM Test;
--- DELETE FROM Test where testId = 1 OR testId =2;
+
+-- DELETE FROM Test where testId > 6;
 
 -- for logfile 1.txt
 INSERT INTO BluetoothSignal VALUES
