@@ -1,3 +1,8 @@
+-- BCPR203 - Database Management Systems
+-- Assignment One: Signal Tester Log Database Analysis
+-- Student: Harry Lo
+-- File Name: SignalTesterLogTable.sql
+
 -- DROP DATABASE SignalTesterLog;
 
 -- create database
