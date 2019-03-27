@@ -21,7 +21,10 @@ FROM Test;
 -- 5) Find the correlation between signal strength and signal quality
 -- (The correlation can be plotted by using the data given by the select statement below.)
 -- (The select statement below gives signal strengths, corresponding signal qualities and correspnding frequency Numbers)
-SELECT signalStrength, signalQuality, frequencyNumber FROM RawData WHERE signalQuality != 99 ORDER BY frequencyNumber, signalStrength;
+SELECT RawData.signalStrength, RawData.signalQuality, RawData.frequencyNumber, Rf.frequencyBand
+FROM RawData 
+INNER JOIN Rf ON RawData.frequencyNumber = Rf.frequencyNumber
+WHERE signalQuality != 99 ORDER BY frequencyNumber, signalStrength;
 
 -- 6) Count the number of signal log files per Bluetooth Names and print out each of the locations
 
