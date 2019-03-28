@@ -29,9 +29,9 @@ CREATE TABLE IF NOT EXISTS Threshold(
 )ENGINE = INNODB;
 -- DROP TABLE Threshold;
 
--- create Test Table
-CREATE TABLE IF NOT EXISTS Test(
-	testId INT NOT NULL PRIMARY KEY,
+-- create Log Table
+CREATE TABLE IF NOT EXISTS Log(
+	logId INT NOT NULL PRIMARY KEY,
     userName VARCHAR(10),
 	antennaTestType ENUM('Blade', 'Whip', 'Blade&Whip'),
 	signalResultVodafoneBlade ENUM('Fail', 'Pass', 'NotTested', 'Unregistered'),
@@ -84,13 +84,13 @@ CREATE TABLE IF NOT EXISTS Test(
 	modemStatusTelstraWhip VARCHAR(37),
 	modemStatusExternal VARCHAR(37)
     )ENGINE = INNODB;
--- DROP TABLE Test;
+-- DROP TABLE Log;
 
 CREATE TABLE IF NOT EXISTS BluetoothSignal(
 	BtSigId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     BtSignal DECIMAL(4,1),
-    testId INT NOT NULL,
-    FOREIGN KEY (testId) REFERENCES Test (testId)
+    logId INT NOT NULL,
+    FOREIGN KEY (logId) REFERENCES Log (logId)
 )ENGINE = INNODB;
 -- DROP TABLE BluetoothSignal
 
@@ -99,9 +99,9 @@ CREATE TABLE IF NOT EXISTS Job(
     bluetoothName VARCHAR(8) NOT NULL,
 	jobDateTime DATETIME NOT NULL,
     PRIMARY KEY (workOrder, bluetoothName, jobDateTime),
-    testId INT NOT NULL,
-    UNIQUE KEY (testId),
-    FOREIGN KEY (testId) REFERENCES Test (testId)
+    logId INT NOT NULL,
+    UNIQUE KEY (logId),
+    FOREIGN KEY (logId) REFERENCES Log (logId)
 )ENGINE = INNODB;
 -- DROP TABLE Job;
 
@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS RawData(
     signalQuality INT,
     frequencyNumber ENUM('I', '0', '1', '2', '3', '4', '5', '6', '7') NOT NULL,
 	FOREIGN KEY (frequencyNumber) REFERENCES Rf (frequencyNumber),
-	testId INT NOT NULL,
-    FOREIGN KEY (testId) REFERENCES Test (testId)
+	logId INT NOT NULL,
+    FOREIGN KEY (logId) REFERENCES Log (logId)
 )ENGINE = INNODB;
 -- DROP TABLE RawData;

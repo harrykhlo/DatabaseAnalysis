@@ -24,33 +24,33 @@ INSERT INTO Threshold VALUES (1, 6.0, 12.0, 15.0, 30.0, 10.0, 20.0);
 -- DELETE FROM Threshold WHERE thresholdId = 1;
 SELECT * FROM Threshold;
 
--- insert Test Table
+-- insert Log Table
 -- for logfile 1.txt
-INSERT INTO Test VALUES 
+INSERT INTO Log VALUES 
 (1, 'Eevee', 'Blade', 'Unregistered', 'NotTested', 'Pass', 'NotTested', 'NotTested', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 61.13, NULL, NULL, 1, 'True', NULL, 'False', NULL, NULL, 'Unregistered', NULL, 'Telstra Mobile', NULL, NULL, NULL, NULL, 'kCLLocationAccuracyKilometer', 'iPad6,12', '89314404000248157530', '89610180002243817774', NULL, 'SDS-196B', 'GAT-17R3', '2.2.5', 3.92, 'EWM400', 'Registeration Denied', NULL, 'Registered, home network', NULL, NULL);
 
 -- for logfile 2.txt
-INSERT INTO Test VALUES
+INSERT INTO Log VALUES
 (2, 'Pikachu', 'Blade', 'Pass', 'NotTested', 'Pass', 'NotTested', 'NotTested', NULL, NULL, NULL, NULL, NULL, 14.65, NULL, 20.5, NULL, NULL, 23.08, NULL, 21.77, NULL, NULL, 1, 'False', NULL, 'False', NULL, NULL, 'vodafone AU', NULL, 'Telstra Mobile', NULL, NULL, 152.752432376289, -27.6047716895375, 'kCLLocationAccuracyKilometer', 'iPad Air', '89314404000248186935',  '89610180002249048341', NULL, 'SDS-043C', 'GAT-17R3', '2.2.5', 3.92, 'EWM400', 'Registered, Roaming', NULL, 'Registered, home network', NULL, NULL);
 
 -- for logfile 3.txt
-INSERT INTO Test VALUES
+INSERT INTO Log VALUES
 (3, 'Celebi', 'Blade', 'Unregistered', 'NotTested', 'Pass', 'NotTested', 'NotTested', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 27.2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'True', NULL, 'False', NULL, NULL, 'Unregistered', NULL, 'Telstra Mobile', NULL, NULL, 139.34259429587, -35.6776790181507, 'kCLLocationAccuracyKilometer', 'iPad Air', '89314404000266650267', '89610180002249046930', NULL, 'SDS-061C', 'GAT-17R3', '2.2.5', 3.88, 'EWM400', 'Not Registered, searching for network', NULL, 'Registered, home network', NULL, NULL);
 
 -- for logfile 4.txt
-INSERT INTO Test VALUES
+INSERT INTO Log VALUES
 (4, 'Snorlax', 'Blade', 'NotTested', 'NotTested', 'NotTested', 'NotTested', 'Pass', NULL, NULL, NULL, NULL, 9.0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, 'False', NULL, NULL, NULL, NULL, 'vodafone AU', 152.984367638172, -27.4171041995673, 'kCLLocationAccuracyKilometer', 'iPad6,12', NULL, NULL, '89314404000266723023', 'SDS-008C', 'GAT-17R3', '2.2.5', 3.94, 'EWM1000', NULL, NULL, NULL, NULL, 'Registered, Roaming');
 
 -- for logfile 5.txt
-INSERT INTO Test VALUES
+INSERT INTO Log VALUES
 (5, 'Charizard', 'Blade', 'Pass', 'NotTested', 'Pass', 'NotTested', 'NotTested', NULL, NULL, NULL, NULL, NULL, 12.0, NULL, 16.4, NULL, NULL, 26.92, NULL, 30.79, NULL, NULL, 1, 'False', NULL, 'False', NULL, NULL, 'vodafone AU',NULL, 'Telstra Mobile', NULL, NULL, 153.024695282944, -27.1806907654062, 'kCLLocationAccuracyKilometer', 'iPad7,2', '89314404000248233075', '89610180002249047685',NULL, 'SDS-049C', 'GAT-17R3', '2.2.5', 3.69, 'EWM400', 'Registered, Roaming', NULL, 'Registered, home network', NULL, NULL);
 
 -- for logfile 6.txt
-INSERT INTO Test VALUES
+INSERT INTO Log VALUES
 (6, 'Mewtwo', 'Blade', 'Unregistered', 'NotTested', 'Pass', 'NotTested', 'NotTested', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 46.07, NULL, NULL, 1, 'True', NULL, 'False', NULL, NULL, 'Unregistered', NULL, 'Telstra Mobile', NULL, NULL, 152.971914761231, -27.0792295037818, 'kCLLocationAccuracyKilometer', 'iPad Air', '89314404000281178914', '89610180002249045296', NULL, 'SDS-026C', 'GAT-17R3', '2.2.5', 3.88, 'EWM400', 'Registeration Denied', NULL, 'Registered, home network', NULL, NULL);
-SELECT * FROM Test;
+SELECT * FROM Log;
 
--- DELETE FROM Test where testId > 6;
+-- DELETE FROM Log where logId > 6;
 
 -- for logfile 1.txt
 INSERT INTO BluetoothSignal VALUES
